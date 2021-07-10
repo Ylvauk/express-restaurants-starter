@@ -1,12 +1,12 @@
-# Restaurants JSON API
+# 🍜 Restaurants JSON API
 
 This is starter code for the Express API Relationships lesson. The basic server code, database connection, and Restaurant Model and Controller files have been set up for you.
 
-## Requirements
+## ✅ Requirements
 
 - Node, Nodemon and NPM installed globally
 
-## Setup & Installation
+## 🛠 Setup & Installation
 
 1. Fork and clone this directory.
 1. Run `npm install` to download required dependencies (Express, Mongoose, CORS, and dotenv).
@@ -18,3 +18,5 @@ DATABASE_URL=mongodb+srv://db-user:aLasdfqpA3zAdLeXe@cluster0.yshuq.mongodb.net/
 ```
 
 To run your server, use the `npm run dev` command. In the browser, if you go to `localhost:8080`, you should see text that says: 'Welcome to the Restaurants API'.
+
+Happy coding! 🤓
