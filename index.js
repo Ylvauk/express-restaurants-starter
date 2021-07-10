@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 //=============================================================================
 
 // Redirect
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
 	res.redirect('/restaurants');
 });
 
