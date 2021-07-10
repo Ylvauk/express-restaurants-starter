@@ -31,6 +31,14 @@ app.get('/', (req, res) => {
 const restaurantsController = require('./controllers/restaurants.js');
 app.use('/restaurants', restaurantsController);
 
+// Review routes
+const reviewsController = require('./controllers/reviews.js');
+app.use('/reviews', reviewsController);
+
+// User routes
+const usersController = require('./controllers/users.js');
+app.use('/users', usersController);
+
 //=============================================================================
 // START SERVER
 //=============================================================================
