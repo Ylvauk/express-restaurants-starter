@@ -13,10 +13,13 @@ This is starter code for the Express API Relationships lesson. The basic server 
 1. Go to your MongoDB Atlas cluster in the cloud and copy the connection string. Be sure your user password is interpolated, and change the name of the database to "restaurants".
 1. Create a `.env` file in the root of this repository. In the `.env` file, create a variable called `DATABASE_URL=` and paste the connection string like so:
 
-```
-DATABASE_URL=mongodb+srv://db-user:aLasdfqpA3zAdLeXe@cluster0.yshuq.mongodb.net/restaurants?retryWrites=true&w=majority
+> ```
+> DATABASE_URL=mongodb+srv://db-user:aLasdfqpA3zAdLeXe@cluster0.yshuq.mongodb.net/restaurants?retryWrites=true&w=majority
+> ```
+
 ```
 
 To run your server, use the `npm run dev` command. In the browser, if you go to `localhost:8080`, you should see text that says: 'Welcome to the Restaurants API'.
 
 Happy coding! 🤓
+```
