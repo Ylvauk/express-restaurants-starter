@@ -18,3 +18,9 @@ This is starter code for the Express API Relationships lesson. The basic server 
 To run your server, use the `npm run dev` command. In the browser, if you go to `localhost:8080`, you should see text that says: 'Welcome to the Restaurants API'.
 
 Happy coding! 🤓
+
+## [License](LICENSE)
+
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+1. All software code is licensed under GNU GPLv3. For commercial use or
+   alternative licensing, please contact legal@ga.co.
