@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Restaurant = require('../models/restaurant');
+const User = require('../models/user.js');
 
 // INDEX
 // GET /restaurants
@@ -15,6 +16,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
 	const id = req.params.id;
 	Restaurant.findById(id)
+		.populate('customers')
 		.then((restaurant) => res.json(restaurant))
 		.catch(next);
 });
@@ -44,6 +46,28 @@ router.delete('/:id', (req, res, next) => {
 	const id = req.params.id;
 	Restaurant.findOneAndDelete({ _id: id })
 		.then(() => res.sendStatus(204))
+		.catch(next);
+});
+
+// add user to customers array
+// PUT /restaurants/:restaurantID/users/:userID
+router.put('/:id/users/:userId', (req, res, next) => {
+	let updatedRestaurant;
+	Restaurant.findByIdAndUpdate(
+		req.params.id,
+		{ $push: { customers: req.params.userId } },
+		{ new: true }
+	)
+		.then((restaurant) => {
+			updatedRestaurant = restaurant;
+		})
+		.then(() => {
+			User.findByIdAndUpdate(
+				req.params.userId,
+				{ $push: { restaurants: req.params.id } },
+				{ new: true }
+			).then(() => res.json(updatedRestaurant));
+		})
 		.catch(next);
 });
 
