@@ -15,7 +15,7 @@ This is starter code for the Express API Relationships lesson. The basic server 
 
 > `DATABASE_URL=mongodb+srv://db-user:aLasdfqpA3zAdLeXe@cluster0.yshuq.mongodb.net/restaurants?retryWrites=true&w=majority`
 
-To run your server, use the `npm start` command. In the browser, if you go to `localhost:8080`, you should see text that says: 'Welcome to the Restaurants API'.
+To run your server, use the `npm run dev` or `nodemon` command. In the browser, if you go to `localhost:8080`, you should see text that says: 'Welcome to the Restaurants API'.
 
 Happy coding! 🤓
 
