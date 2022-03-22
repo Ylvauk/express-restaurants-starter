@@ -9,11 +9,7 @@ const mongoURI = process.env.DATABASE_URL;
 const db = mongoose.connection;
 
 // Connect to Mongo
-mongoose.connect(mongoURI, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-});
+mongoose.connect(mongoURI);
 
 // Connection Error/Success - optional but can be helpful
 // Define callback functions for various events
